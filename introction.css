@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+}
+.intro{
+    width: 380px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.intro .header .content{
+    height: 180px;
+    padding: 20px 0 0 30px;
+    background: RGB(235, 82, 74);
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.intro .header .content .headPic{
+    float: left;
+    width: 80px;
+    border-radius: 40px;
+    margin-right: 25px;
+}
+
+.intro .header .content aside{
+    overflow: hidden;
+}
+
+.intro .header .content aside h1{
+    float: left;
+    width: 200px;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.intro .header .content aside p{
+    float: left;
+    width: 200px;
+    margin: 10px auto;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.intro .header .content button{
+    width: 200px;
+    height: 48px;
+    background: #FFBE44;
+    border: #FFBE44;
+    border-radius: 24px;
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    margin-left: -100px;
+    font-size: 16px;
+    color: #C63535;
+    outline: none;/*消除button点击时外围的轮廓线*/
+    /*过渡：即实现button简单的展开动画效果*/
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    transition-delay: 0.1s;
+}
+.intro .header .content button svg{
+    /*定位svg位于button中间*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /*过渡：即实现svg透明度逐渐减弱的效果*/
+    opacity: 0;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.intro .header .content button svg path{
+    fill: #C63535;
+}
+.intro .header .content button.action{
+    width: 48px;
+    height: 48px;
+    left: 80%;
+    margin-left: 0;
+    /*过渡：即实现button简单收缩的动画效果*/
+    -webkit-transition:  0.2s;
+    -moz-transition:  0.2s;
+    -o-transition:  0.2s;
+    transition:  0.2s;
+    transition-delay: 0.4s;
+}
+.intro .header .content button span{
+    /*过渡：即实现span的透明图逐渐增强的效果*/
+    opacity: 1;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    transition-delay: .4s;
+}
+.intro .header .content button.action span{
+    opacity: 0;
+    transition-delay: 0s;
+}
+.intro .header .content button.action svg{
+    opacity: 1;
+    transition-delay: .5s;
+}
+.intro .header .title{
+    width: 350px;
+    padding-left: 30px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: #C63535;
+    /*过渡：即实现简单的展开动画效果*/
+    max-height: 0;
+    -webkit-transition: 0.55s;
+    -moz-transition: 0.55s;
+    -o-transition: 0.55s;
+    transition: 0.55s;
+    overflow: hidden;
+}
+.intro .header .title.action{
+    max-height: 50px;
+    -webkit-transition: all 1.3s;
+    -moz-transition: all 1.3s;
+    -o-transition: all 1.3s;
+    transition: all 1.3s;
+}
+.intro .header .title span{
+    display: block;
+    line-height: 50px;
+}
+.intro .connection {
+    /*display: none;*/
+    max-height: 0px;
+    overflow: hidden;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+
+}
+.intro .connection.action{
+    /*display: block;*/
+    max-height: 330px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+.intro .connection li{
+    height: 90px;
+    border-radius: 5px;
+    margin-top: 20px;
+    list-style: none;
+    background: white;
+}
+.intro .connection li a{
+    display: block;
+    height: 90px;
+    padding: 20px 10px 20px 30px;
+    text-decoration: none;
+    overflow: hidden;
+}
+.intro .connection li a .icon{
+    float: left;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-right: 20px;
+    border-radius: 25px;
+}
+.intro .connection li .email .icon{
+    background: #D14836;
+}
+.intro .connection li .facebook .icon{
+    background: #3B5998;
+}
+.intro .connection li .twitter .icon{
+    background: #1DA1F2;
+}
+.intro .connection li a .icon svg{
+    width: 20px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+}
+.intro .connection li a .icon svg path{
+    fill: #FFFFFF;
+}
+.intro .connection .content{
+    float: left;
+}
+.intro .connection .content h1{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+}
+.intro .connection .email h1{
+    color: #D14836;
+}
+.intro .connection .facebook h1{
+    color: #3B5998;
+}
+.intro .connection .twitter h1{
+    color: #1DA1F2;
+}
+.intro .connection .content span{
+    font-size: 14px;
+    color: #B3B3B3;
+}
+.intro .connection li a svg.arrow{
+    float: right;
+}
+.intro .connection li a svg.arrow path{
+    fill: #E6E6E6;
+}
